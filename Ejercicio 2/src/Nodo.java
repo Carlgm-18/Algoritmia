@@ -1,6 +1,6 @@
 public class Nodo<T> {
     private Nodo<T> next;
-    private T value;
+    final private T value;
 
     public Nodo(T e){
         this.value = e;
