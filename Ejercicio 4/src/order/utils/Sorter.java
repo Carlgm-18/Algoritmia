@@ -4,9 +4,9 @@ import java.util.Comparator;
 
 /**
  * Esta clase tiene la función de ser capaz de ordenar una lista de elementos genéricos.
- *
+ * <br><br>
  * Para ordenar los elementos la clase hace uso del algoritmo de selección directa.
- *
+ * <br><br>
  * El algortimo de selección directa recorre una lista de elementos de tal manera
  * que busca el menor de los elementos y lo coloca en la primera posición; luego busca
  * el segundo elemento más pequeño y lo coloca en la segunda posición y así hasta
@@ -29,8 +29,18 @@ public class Sorter<T extends Comparable<T>>{
 
     /**
      * Implementa la ordenación de elementos que tengan
-     * implementada la interfaz {@link Comparable}
-     *
+     * implementada la interfaz {@link Comparable}.
+     * <br>
+     * <br>
+     * P ≡ {<br>
+     *      (∀i: 0 <= i < data.length: data[i] implements Comparable)<br>
+     *     }
+     * <br>
+     * <br>
+     * data' ∈ Array[T extends Comparable<T>]<br><br>
+     * Q ≡ {<br>
+     *      (∀i: 0 <= i < data'.length - 1: data[i] <= data[i + 1])<br>
+     *     }<br>
      * @param data lista de elementos a ordenar
      */
     public void sortComparable(T[] data) {
@@ -54,6 +64,18 @@ public class Sorter<T extends Comparable<T>>{
     /**
      * Implementa la ordenación de elementos
      * utilizando un objeto de tipo {@link Comparator}
+     * <br>
+     * <br>
+     *
+     * P ≡ {<br>
+     *      (∀i: 0 <= i < data.length: data[i] implements Comparable)<br>
+     *     }
+     * <br>
+     * <br>
+     * data' ∈ Array[T extends Comparable<T>]<br>
+     * Q ≡ {<br>
+     *      (∀i: 0 <= i < data'.length - 1: data[i] <= data[i + 1])<br>
+     *     }<br>
      * @param data lista de elementos a ordenar
      */
     public void sortComparator(T[] data) {

@@ -20,7 +20,7 @@ public class QueueDinamica<T> implements Queue<T> {
         if(this.isEmpty()) {
             this.first = newNode;
         }else{
-            newNode.setBefore(this.last);
+            this.last.setNext(newNode);
         }
         this.last = newNode;
         this.size++;
@@ -32,10 +32,10 @@ public class QueueDinamica<T> implements Queue<T> {
             throw new ColaException("La cola está vacía");
         }
 
+        this.size--;
+
         T ret = this.first.getValue();
-
         this.first = this.first.getNext();
-
         return ret;
     }
 
@@ -55,11 +55,10 @@ public class QueueDinamica<T> implements Queue<T> {
     }
 
     private static class Nodo<T> {
-        private Nodo<T> before, next;
+        private Nodo<T> next;
         private final T value;
 
         public Nodo(T elem) {
-            this.before = null;
             this.next = null;
             this.value = elem;
         }
@@ -74,14 +73,6 @@ public class QueueDinamica<T> implements Queue<T> {
 
         public Nodo<T> getNext() {
             return this.next;
-        }
-
-        public void setBefore(Nodo<T> before) {
-            this.before = before;
-        }
-
-        public Nodo<T> getBefore() {
-            return this.before;
         }
     }
 }
