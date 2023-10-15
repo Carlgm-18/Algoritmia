@@ -7,6 +7,7 @@ import java.util.Comparator;
  * <br><br>
  * Para ordenar los elementos la clase hace uso del algoritmo de selección directa.
  * <br><br>
+ *
  * El algortimo de selección directa recorre una lista de elementos de tal manera
  * que busca el menor de los elementos y lo coloca en la primera posición; luego busca
  * el segundo elemento más pequeño y lo coloca en la segunda posición y así hasta
@@ -32,9 +33,11 @@ public class Sorter<T extends Comparable<T>>{
      * implementada la interfaz {@link Comparable}.
      * <br>
      * <br>
+     * <pre>
      * P ≡ {<br>
      *      (∀i: 0 <= i < data.length: data[i] implements Comparable)<br>
      *     }
+     * </pre>
      * <br>
      * <br>
      * data' ∈ Array[T extends Comparable<T>]<br><br>
