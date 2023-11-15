@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import org.junit.jupiter.api.Test;
 
 /**
  * Esta clase agrupa dos métodos de busqueda que implementan el
@@ -54,6 +55,7 @@ public class BinarySearcher {
      * @return posición del elemento
      * @param <T> tipo de dato del objeto a buscar
      */
+    @Test
     public <T> int binarySearch(T[] list, T e, Comparator<T> comparator) {
         int low = 0;
         int high = list.length - 1;

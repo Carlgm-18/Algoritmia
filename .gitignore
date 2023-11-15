@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Not needed folders
+/Correcion_companeros
+
 # Log file
 *.log
 
@@ -23,3 +26,8 @@
 hs_err_pid*
 replay_pid*
 /Ejercicio 6/nbproject/private/
+/Ejercicio_6/build/
+/Ejercicio_7/build/
+/Ejercicio_8/build/
+/Exercici 9 - Cim d'un conjunt d'elements ENUNCIAT/dist/
+

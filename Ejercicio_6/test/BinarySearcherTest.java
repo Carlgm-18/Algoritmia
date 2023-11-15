@@ -3,7 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BinarySearcherTest {
+public class BinarySearcherTest {
     private BinarySearcher binarySearcher;
     private final boolean[] solutions = {false, true, true, true, true, false};
     private static final int[] initialValues = {0, 0, 0, -1, -5};
